@@ -7,8 +7,8 @@
 // @grant        none
 // @copyright    2026, Lua (https://github.com/LuaCoding)
 // @license      MIT
-// @downloadURL  TBA
-// @updateURL    TBA
+// @downloadURL  https://raw.githubusercontent.com/LuaCoding/gg-userscripts/refs/heads/main/partybutton.js
+// @updateURL    https://raw.githubusercontent.com/LuaCoding/gg-userscripts/refs/heads/main/partybutton.js
 // ==/UserScript==
 
 document.addEventListener("click", (e) => {
