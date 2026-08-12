@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         community button fixer
 // @description  reverts the community button's destination back to parties
-// @version      1.0
+// @version      1.1
 // @author       Lua
 // @match        *://*.geoguessr.com/*
 // @grant        none
@@ -10,14 +10,10 @@
 // @downloadURL  https://raw.githubusercontent.com/LuaCoding/gg-userscripts/refs/heads/main/partybutton.user.js
 // @updateURL    https://raw.githubusercontent.com/LuaCoding/gg-userscripts/refs/heads/main/partybutton.user.js
 // ==/UserScript==
-
 document.addEventListener("click", (e) => {
-    const n = e.target.closest("a,button,div,span");
+    const n = e.target.closest('a[href="/community/clubs"]');
     if (!n) return;
-
-    if ((n.textContent || "").trim() === "Community") {
-        e.preventDefault();
-        e.stopPropagation();
-        location.assign("/community/parties");
-    }
+    e.preventDefault();
+    e.stopPropagation();
+    location.assign("/community/parties");
 }, true);
